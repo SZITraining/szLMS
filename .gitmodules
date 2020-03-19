@@ -1,0 +1,3 @@
+[submodule "submodules\\sziTools"]
+	path = submodules\\sziTools
+	url = https://github.com/SZITraining/sziTools.git
