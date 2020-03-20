@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{DFE847B9-6A55-4617-B7FA-CF783304C324}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{DFE847B9-6A55-4617-B7FA-CF783304C324}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "submodules\sziTools\Helpers\Helpers.csproj", "{3EBD5634-142D-487F-BB11-4A9E025B8120}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sziServices", "sziServices\sziServices.csproj", "{1CA324D3-98D0-47F6-9655-3381294095DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3EBD5634-142D-487F-BB11-4A9E025B8120}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EBD5634-142D-487F-BB11-4A9E025B8120}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EBD5634-142D-487F-BB11-4A9E025B8120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA324D3-98D0-47F6-9655-3381294095DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA324D3-98D0-47F6-9655-3381294095DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA324D3-98D0-47F6-9655-3381294095DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA324D3-98D0-47F6-9655-3381294095DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
