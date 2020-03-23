@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using sziServices.Services;
+using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -19,20 +20,20 @@ namespace WebAPI.Controllers
 
         // GET: api/<controller>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            var users = _userService.GetAllUsers();
+            var result = await _userService.GetAllUsers();
 
-            return Json(users);
+            return Json(result);
         }
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> GetOne(int id)
         {
-            var _result = "value" + id.ToString();
+            var result = await _userService.GetOneUser(id);
 
-            return _result;
+            return Json(result);
         }
 
         // POST api/<controller>

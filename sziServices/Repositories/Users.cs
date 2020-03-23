@@ -1,18 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using sziServices.Models;
 
 namespace sziServices.Repositories
 {
     public interface IUsersRepository
     {
-        List<User> GetAllUsers();
+        Task<List<User>> GetAllUsers();
+
+        Task<User> GetOneUser(int id);
     }
 
     public class UsersRepository : IUsersRepository
     {
-        public List<User> GetAllUsers()
-        {
-            List<User> users = new List<User>()
+        private readonly List<User> Users = new List<User>()
                     {
                         new User()
                         {
@@ -26,7 +27,18 @@ namespace sziServices.Repositories
                         }
                     };
 
+        public async Task<List<User>> GetAllUsers()
+        {
+            List<User> users = await Task.FromResult<List<User>>(Users);
+
             return users;
+        }
+
+        public async Task<User> GetOneUser(int id)
+        {
+            User user = await Task.FromResult<User>(Users[id]);
+
+            return user;
         }
     }
 }
